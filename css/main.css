@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --background-color: #F6F5FA;
     --container-width: 1200px;
@@ -37,7 +42,7 @@ body {
     text-align: center;
     align-items: center;
     border-radius: 100px;
-    
+
     font-family: 'Poppins';
     font-weight: 500;
     font-size: 18px;
@@ -51,10 +56,12 @@ body {
     position: relative;
     cursor: pointer;
 }
-.btn:active{
+
+.btn:active {
     position: relative;
     top: 1px;
 }
+
 .btn-attractive span {
     position: relative;
     pointer-events: none;
@@ -129,11 +136,11 @@ body {
     line-height: 144%;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
+.logo {}
+
+.logo img {
+    width: 142px;
+    height: 700px;
 }
 
 .logo span {
@@ -302,6 +309,10 @@ body {
     margin-bottom: 16px;
 }
 
+.signup-form__input:focus {
+    box-shadow: 0 0 7px rgb(176, 176, 236);
+}
+
 .signup-form__btn {
     width: 330px;
     height: 50px;
@@ -309,12 +320,31 @@ body {
 
 .signup-form__btn--top {
     background: #18C967;
+    border: 2px solid #18C967;
+
+}
+
+.signup-form__btn--top:hover {
+    background: #fff;
+    color: #18C967;
+    border: 2px solid #18C967;
+
+    position: relative;
+    top: 2px;
 }
 
 .signup-form__btn--bottom {
     background: #1DA1F2;
 }
 
+.signup-form__btn--bottom:hover {
+    background: #fff;
+    color: #1DA1F2;
+    border: 2px solid #1DA1F2;
+
+    position: relative;
+    top: 2px;
+}
 
 
 /*  link-building   */
@@ -372,31 +402,284 @@ body {
 }
 
 
+/*    prices   */
+.prices {
+    padding: 58px 0;
+    background-color: var(--background-color);
+}
+
+.prices__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.prices__title {
+    margin-bottom: 16px;
+
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 2.2857rem;
+    /*32px*/
+    line-height: 39px;
+    color: var(--text-dark);
+    opacity: 0.96;
+
+    text-align: center;
+}
+
+.prices__descr {
+    margin-bottom: 40px;
+
+    font-family: 'Inter';
+    font-size: 1.142rem;
+    /*16px*/
+    line-height: 118%;
+    color: var(--text-dark);
+    opacity: 0.68;
+
+    text-align: center;
+    align-self: center;
+    max-width: 600px;
+}
+
+.prices__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    text-align: center;
+    column-gap: 70px;
+}
+
+.prices__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 364.25px;
+    height: 790px;
+}
+
+.prices-card {
+    padding: 43px 44px 10px;
+
+    box-shadow: 0px 10px 82px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+.prices-card:hover {
+    box-shadow: 0px 4px 82px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top: 1px;
+}
+
+.prices-card__title {
+    margin-bottom: 14.5px;
+
+    font-weight: 600;
+    font-size: 1.71rem;
+    /*24px*/
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: #fff;
+
+    background: #1DA1F2;
+    border-radius: 5.53903px;
+    display: inline-block;
+    padding: 5.5px 14px;
+}
+
+.prices-card__descr {
+    margin-bottom: 28px;
+
+    font-weight: 300;
+    font-size: 0.9rem;
+    /*14.7708px*/
+    line-height: 157%;
+
+    color: #000;
+}
+
+.prices-card__price {
+    align-self: flex-start;
+    text-align: left;
+    padding-top: 28px;
+    font-weight: 600;
+    font-size: 4.714rem;
+    /*66px*/
+    line-height: 110%;
+    letter-spacing: -0.461586px;
+    color: #000;
+}
+
+.prices-card__price span {
+    padding-bottom: 28px;
+    display: block;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+    /*14.7708px*/
+    line-height: 162%;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.prices-card__list {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 37px;
+    font-size: 0.9rem;
+    /*14.7708px*/
+    line-height: 24px;
+    /* identical to box height, or 162% */
+    color: #000000;
+}
+
+.prices-card__conditions {
+    position: relative;
+    padding-left: 27px;
+    display: block;
+}
+
+.prices-card__conditions::before,
+.condition-mark::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+
+    background-repeat: no-repeat;
+}
+
+.prices-card__conditions::before {
+    background-image: url(./../img/icons/check-mark.png);
+}
+
+.prices-card__conditions--red-mark::before {
+    background-image: url(./../img/icons/red-mark.png);
+}
+
+.prices-card__conditions:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.prices-card__btn {
+    margin-bottom: 5.5px;
+    height: 36.93px;
+    width: 100%;
+    text-align: center;
+    padding: 7px 0;
+
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 0.9rem;
+    /*14.7708px*/
+    line-height: 150%;
+    color: #FFFFFF;
+    background: #1DA1F2;
+    border: 2px solid #1DA1F2;
+}
+
+.prices-card__btn:hover {
+    color: #1DA1F2;
+    background: #fff;
+}
+
+.prices-card__slog {
+    font-size: 0.8rem;
+    /*12.9244px*/
+    line-height: 186%;
+}
+
+.mark {
+    display: block;
+    padding: 4px 30px;
+    margin-bottom: 34px;
+    background: #FFD600;
+    border-radius: 0px 0px 10px 10px;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 0.9rem;
+    /*14.7708px*/
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+#prices-card--pop {
+    height: 813px;
+    padding: 0 44px 10px;
+
+    background: #1DA1F2;
+    color: #fff;
+}
+
+#prices-card--pop .prices-card__title {
+    background: #f1f1f1;
+    color: #160f0f;
+}
+
+#prices-card--pop .prices-card__price span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#prices-card--pop .prices-card__list,
+#prices-card--pop .prices-card__price,
+#prices-card--pop .prices-card__descr {
+    color: #fff;
+}
+
+#prices-card--pop .prices-card__btn {
+    color: #000;
+    background: #fff;
+    border-radius: 21px;
+    border: 2px solid #fff;
+}
+
+#prices-card--pop .prices-card__btn:hover {
+    color: #fff;
+    background: #000;
+    border: 2px solid #000;
+}
+
+#prices-card--pop .prices-card__conditions::before {
+    background-image: url(./../img/icons/white-mark.png);
+}
+
+
+
 /*   footer   */
 
-.footer{
+.footer {
     padding: 24px 0;
     background: #1DA1F2;
 }
 
-.footer__row{
+.footer__row {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.socials{
+.socials {
     display: flex;
     column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
-.socials li:hover path{
+
+.socials li:hover path {
     fill: var(--text-dark);
 }
-.footer p{
+
+.footer p {
     color: #fff;
 }
 
-.footer span{
+.footer span {
     color: red;
     font-size: 1.5em;
 }

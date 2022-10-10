@@ -19,11 +19,31 @@
         max-width: 100%;
         height: auto;
     }
+
+    .prices__wrapper {
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prices__row {
+        min-width: 100%;
+        min-height: 100px;
+        overflow-x: auto;
+    }
 }
 
 @media (max-width: 970px) {
     .header__top {
         padding: 54px 0;
+    }
+
+    .header__content {
+        max-width: 672px;
     }
 }
 
@@ -32,10 +52,23 @@
         flex-direction: column;
         row-gap: 30px;
     }
+
+    .link-building__descr {
+        max-width: 100%;
+    }
 }
 
 
 @media (max-width: 520px) {
+    .header__title {
+        margin-bottom: 38px;
+        font-size: 46px;
+    }
+
+    .header__descr {
+        margin-bottom: 43px
+    }
+
     .signup-form {
         padding: 11px 28px 43px;
     }
@@ -50,15 +83,37 @@
     .signup-form p::after {
         width: 113.57px;
     }
+
+    .prices__row {
+        flex-direction: column;
+        row-gap: 30px;
+        overflow: hidden;
+    }
+
+    .prices__item {
+        max-width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        height: auto;
+    }
+
+    #prices-card--pop,
+    .prices-card {
+        padding-left: 60px;
+        padding-right: 30px;
+    }
+
 }
 
 @media (max-width: 430px) {
-    .btn{
+    .btn {
         padding: 8px 60px;
     }
-    .header__top{
+
+    .header__top {
         align-items: flex-start;
     }
+
     .menu__list {
         flex-direction: column;
         row-gap: 25px;
@@ -68,6 +123,16 @@
 
     .signup-form__title {
         font-size: 30px;
+    }
+
+    #prices-card--pop,
+    .prices-card {
+        padding-left: 30px;
+    }
+
+    .footer__row {
+        flex-direction: column;
+        row-gap: 20px;
     }
 }
 
