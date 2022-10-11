@@ -1,5 +1,13 @@
 # Links4U-Landing-Page
-## Landing page made using HTML, CSS and JavaScript
-* Made with semantics in mind (broken into semantic blocks)
-* There is an adaptability of the layout
-* Hover and active are made for buttons
+## Landing Page, созданная с использованием HTML, CSS и JavaScript
+* Учет семантики (разбито на семантические блоки) ✅
+* Кроссбраузерность ✅
+* Есть адаптивность макета под самые популярные разрешения экрана ✅
+**1440px
+**1024px
+**768px
+**425px
+**375px
+**320px
+* Настроено поведение кнопок и блоков для hover, active ✅
+* Верстка проверена на валидаторе ✅
